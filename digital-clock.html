@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Digital Clock</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="clock-container">
+    <div class="time" id="time">00:00:00</div>
+    <div class="ampm" id="ampm">AM</div>
+    <div class="date" id="date">Loading...</div>
+  </div>
+
+  <script>
+    // Add your JavaScript code here
+    function updateClock() {
+      const now = new Date();
+      document.getElementById('time').textContent = now.toLocaleTimeString();
+    }
+    
+    setInterval(updateClock, 1000);
+    updateClock();
+  </script>
+</body>
+</html>
